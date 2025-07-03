@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Clash of clans</title>
+<link rel="stylesheet" href="Clash.css">
+
+<!--Boxicon link-->
+<link rel="stylesheet" href="boxicons.min.css">
+<!--remixicon-->
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet">
+
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unbounded:wght@200..900&display=swap" 
+    rel="stylesheet">
+
+</head>
+
+<header>
+    <a hred="#" class="logo">Clash of Clans</a>
+
+    <ul class="navlist">
+        <li><a href="#">Home</a> </li>
+        <li><a href="#">About</a> </li>
+        <li><a href="#">Clans</a> </li>
+        <li><a href="#">Town hall</a> </li>
+        <li><a href="#">Troops</a> </li>
+        <li><a href="#">Contact</a> </li>
+    </ul>
+
+    <div class="bx bx-menu" id="menu-icon"></div>
+</header>
+
+<section class="hero">
+    <div class="hero-text"> 
+       <h4>Choose your character</h4>
+       <h1 id="hero-title">GOBLINS</h1>
+
+<p>Join millions of players worlwide as you build your 
+village,</br> raise a clan, and compete in epice
+Clan Wars!!</p>
+
+<a href="#" id="compare-btn">Compare</a>
+<a href="#" class="ctaa"><i class='bxr  bx-play-circle'  ></i>Watch Gameplay </a>
+    </div>
+    <div class="hero-img slider">
+
+<img src="images/Goblin.png" class="slide active" data-bg="goblin">
+<img src="images/barbaro.webp" class="slide small-slide" data-bg="barbaro">
+<img src="images/Mago.png" class="slide small-slide" data-bg="mago">
+<img src="images/Mongolfiera.webp" class="slide small-slide" data-bg="mongolfiera">
+<img src="images/Domatore.webp" class="slide small-slide" data-bg="domatore">
+    <!-- aggiungi altre immagini qui -->
+
+    <div class="slider-controls">
+    <span class="prev" id="slider-prev">&#10094;</span>
+    <span class="next" id="slider-next">&#10095;</span>
+    </div>
+</div>
+</section>
+
+<div class="icons">
+    <a href="#"><i class="ri-instagram-line"></i></a>
+    <a href="#"><i class="ri-youtube-line"></i></a>
+    <a href="#"><i class="ri-facebook-box-line"></i></a>
+    
+</div>
+
+<div class="scroll-down">
+    <a href="#"><i class="ri-arrow-down-line"></i></a>
+</div>
+
+
+
+
+<script>
+const slides = document.querySelectorAll('.hero-img.slider .slide');
+const prev = document.getElementById('slider-prev');
+const next = document.getElementById('slider-next');
+let current = 0;
+
+function changeBackground(idx) {
+    const heroSection = document.querySelector('.hero');
+    const slide = slides[idx];
+    const bg = slide.getAttribute('data-bg');
+    let gradient = '';
+    let color = '';
+    let title = '';
+    switch(bg) {
+        case 'goblin':
+            gradient = 'linear-gradient(245.59deg, #4d9559 0%, #38703d 28.53%, #133917 75.52%)';
+            color = '#4d9559';
+            title = 'GOBLINS';
+            break;
+        case 'barbaro':
+            gradient = 'linear-gradient(245.59deg, #ffe259 0%, #ffa751 100%)';
+            color = '#b97a1a';
+            title = 'BARBARI';
+            break;
+        case 'mongolfiera':
+            gradient = 'linear-gradient(245.59deg, #ff5858 0%, #f09819 100%)';
+            color = '#ff5858';
+            title = 'BALLOONS';
+            break;
+        case 'domatore':
+            gradient = 'linear-gradient(245.59deg, #f5e9da 0%, #e2c799 100%)';
+            color = '#a68b5b';
+            title = 'HOG RIDER';
+            break;
+        case 'mago':
+            gradient = 'linear-gradient(245.59deg, #2193b0 0%, #6dd5ed 100%)';
+            color = '#2193b0';
+            title = 'WIZARDS';
+            break;
+        default:
+            gradient = 'linear-gradient(245.59deg, #4d9559 0%, #38703d 28.53%, #133917 75.52%)';
+            color = '#4d9559';
+            title = 'GOBLINS';
+    }
+    heroSection.style.background = gradient;
+
+    // Cambia titolo
+    const heroTitle = document.getElementById('hero-title');
+    if(heroTitle) heroTitle.textContent = title;
+
+    // Cambia colore pulsante Compare
+    const compareBtn = document.getElementById('compare-btn');
+    if(compareBtn) {
+        compareBtn.style.background = color;
+        compareBtn.style.borderColor = color;
+    }
+
+    // Cambia colore frecce slider
+    prev.style.background = color;
+    next.style.background = color;
+
+    // Cambia colore freccia scroll-down
+    const scrollDownIcon = document.querySelector('.scroll-down i');
+    if(scrollDownIcon) {
+        scrollDownIcon.style.background = color;
+        scrollDownIcon.style.borderColor = color;
+    }
+}
+function showSlide(idx) {
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === idx);
+    });
+    changeBackground(idx);
+}
+
+prev.onclick = () => {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+};
+next.onclick = () => {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+};
+showSlide(current);
+</script>
+
+<!--Scroll effect-->
+
+<script src="https://unpkg.com/scrollreveal"></script>
+
+
+
+<!--JS-->
+<script src="Clash.Js"></script>
+
+<body>
