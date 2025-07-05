@@ -273,30 +273,30 @@ section{
 @media (max-width: 680px) {
   .hero-text {
     text-align: center;
-    padding: 0 20px;
+    padding: 0 15px;
   }
   #hero-title {
-    font-size: 3rem;       /* Titolo grande ma non troppo */
+    font-size: 2rem;       /* Titolo più piccolo */
     line-height: 1.2;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.4em;
   }
   .hero-text h4 {
-    font-size: 1.5rem;     /* Sottotitolo più leggibile */
-    margin-bottom: 0.3em;
+    font-size: 1.1rem;     /* Sottotitolo più piccolo */
+    margin-bottom: 0.2em;
   }
   .hero-text p {
-    font-size: 1.1rem;     /* Testo normale un po’ più grande */
-    line-height: 1.4;
+    font-size: 0.9rem;     /* Testo normale più piccolo */
+    line-height: 1.3;
   }
   #compare-btn {
-    font-size: 1.2rem;
-    padding: 12px 30px;
-    margin-top: 1em;
+    font-size: 1rem;
+    padding: 10px 25px;
+    margin-top: 0.8em;
     display: inline-block;
   }
   .ctaa {
-    font-size: 1.1rem;
-    margin-top: 1em;
+    font-size: 1rem;
+    margin-top: 0.8em;
     display: inline-block;
   }
 }
