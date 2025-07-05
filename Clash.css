@@ -40,7 +40,7 @@ header{
         transition: all .55s ease;
     }
 
-    .navilist a:hover{
+    .navlist a:hover{
         border-bottom: 2px solid white;
     }
 
@@ -263,14 +263,14 @@ section{
         align-items: center;
         flex-direction: column;
         padding: 50px 20px;
-        transition: all .55s ease;
+        transition: all .05s ease;
     }
-    .navilist {
+    .navlist {
         display: block;
         margin: 7px 0;
         margin-left: 0;
 }
-.navilist.open{
+.navlist.open{
     right: 0;
 }
 }
