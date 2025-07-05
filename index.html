@@ -87,6 +87,7 @@ let current = 0;
 
 function changeBackground(idx) {
     const heroSection = document.querySelector('.hero');
+    const header = document.querySelector('header');  // Aggiunto qui
     const slide = slides[idx];
     const bg = slide.getAttribute('data-bg');
     let gradient = '';
@@ -101,7 +102,7 @@ function changeBackground(idx) {
         case 'barbaro':
             gradient = 'linear-gradient(245.59deg, #ffe259 0%, #ffa751 100%)';
             color = '#b97a1a';
-            title = 'BARBARIANS';
+            title = 'BARBARI';
             break;
         case 'mongolfiera':
             gradient = 'linear-gradient(245.59deg, #ff5858 0%, #f09819 100%)';
@@ -125,6 +126,10 @@ function changeBackground(idx) {
     }
     heroSection.style.background = gradient;
 
+    if(header) {
+        header.style.background = gradient;
+    }
+
     // Cambia titolo
     const heroTitle = document.getElementById('hero-title');
     if(heroTitle) heroTitle.textContent = title;
@@ -147,6 +152,7 @@ function changeBackground(idx) {
         scrollDownIcon.style.borderColor = color;
     }
 }
+
 function showSlide(idx) {
     slides.forEach((slide, i) => {
         slide.classList.toggle('active', i === idx);
