@@ -163,6 +163,18 @@ next.onclick = () => {
 showSlide(current);
 </script>
 
+
+    <script>
+const menuIcon = document.getElementById('menu-icon');
+const navList = document.querySelector('.navlist');
+
+if (menuIcon && navList) {
+  menuIcon.addEventListener('click', () => {
+    navList.classList.toggle('open');
+  });
+}
+</script>
+
 <!--Scroll effect-->
 
 <script src="https://unpkg.com/scrollreveal"></script>
