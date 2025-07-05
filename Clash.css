@@ -283,11 +283,14 @@ section{
     text-align: center;
     padding: 0 15px;
   }
+ 
   #hero-title {
-    font-size: 2rem;       /* Titolo più piccolo */
+    font-family: 'Permanent Marker', cursive; /* assicurati che sia lo stesso */
+    font-size: 2.5rem;  /* dimensione più adatta su mobile */
     line-height: 1.2;
-    margin-bottom: 0.4em;
+    text-align: center;
   }
+}
   .hero-text h4 {
     font-size: 1.1rem;     /* Sottotitolo più piccolo */
     margin-bottom: 0.2em;
