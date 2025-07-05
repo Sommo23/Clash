@@ -265,6 +265,10 @@ section{
     z-index: 1000;
   }
 
+     .hero {
+    margin-top: 70px; /* o l'altezza reale del tuo header su mobile */
+  }
+
     .navlist.open {
     right: 0;
   }
