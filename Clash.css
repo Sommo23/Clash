@@ -284,10 +284,10 @@ section{
     padding: 0 15px;
   }
  
-  #hero-title {
-    font-family: 'Permanent Marker', cursive; /* assicurati che sia lo stesso */
-    font-size: 2.5rem;  /* dimensione più adatta su mobile */
-    line-height: 1.2;
+ #hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
     text-align: center;
   }
 }
