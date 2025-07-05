@@ -333,7 +333,3 @@ section{
     left: 20%;       /* per centrare l'immagine */
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
