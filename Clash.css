@@ -276,26 +276,26 @@ section{
     padding: 0 20px;
   }
   #hero-title {
-    font-size: 4.5rem;  /* MOLTO più grande */
-    line-height: 1.1;
+    font-size: 3rem;       /* Titolo grande ma non troppo */
+    line-height: 1.2;
     margin-bottom: 0.5em;
   }
   .hero-text h4 {
-    font-size: 2rem;    /* più grande */
+    font-size: 1.5rem;     /* Sottotitolo più leggibile */
     margin-bottom: 0.3em;
   }
   .hero-text p {
-    font-size: 1.5rem;  /* più leggibile */
+    font-size: 1.1rem;     /* Testo normale un po’ più grande */
     line-height: 1.4;
   }
   #compare-btn {
-    font-size: 1.5rem;
-    padding: 15px 40px;
+    font-size: 1.2rem;
+    padding: 12px 30px;
     margin-top: 1em;
     display: inline-block;
   }
   .ctaa {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     margin-top: 1em;
     display: inline-block;
   }
